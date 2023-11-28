@@ -1,0 +1,210 @@
+:root {
+  --top-background: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+  --text-color-light: #FFFFFF;
+  --form-background-color: #FFFFFF;
+  /* --button-color: #11103E; */
+  --button-color: #19c37d;
+  --download-btn-background: #FFFFFF;
+  --loading-card-backround: #F2F2F2;
+  --text-color-dark: #11103E;
+  --mobile-btn-background: #FFFFFF;
+}
+
+.image-generator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 45vh; */
+  background: var(--top-background);
+}
+
+.images-generator__content {
+  color: var(--text-color-light);
+  padding: 0 15px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.images-generator__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.images-generator__description {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.images-generator__form {
+  height: 52px;
+  width: 100%;
+  display: block;
+  padding: 6px;
+  margin: 30px 0 15px;
+  background: var(--form-background-color);
+  border-radius: 30px;
+}
+
+.images-generator__prompt-input {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 17px;
+}
+
+.images-generator__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.images-generator__quantity-select {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.images-generator__quantity-select option {
+  color: var(--text-color-dark);
+}
+
+.images-generator__generate-btn {
+  height: 100%;
+  outline: none;
+  border: none;
+  background: var(--mobile-btn-background);
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 25px;
+  cursor: pointer;
+  color: var(--text-color-dark)
+}
+
+/* Image Galley */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0 15px;
+  max-width: 1250px;
+  margin: 20px auto 50px auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background: var(--loading-card-backround);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.loading .card__img {
+  width: 80px;
+  height: 80px;
+}
+
+.card__download-btn {
+  outline: none;
+  border: none;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: var(--download-btn-background);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.card:not(.loading) .card__download-btn {
+  display: flex;
+}
+
+.card:not(.loading):hover .card__download-btn {
+  display: flex;
+}
+
+.card__download-btn-icon {
+  width: 14px;
+  height: 14px;
+}
+
+@media (min-width: 760px) {
+  .image-generator {
+    height: 40vh;
+  }
+
+  .images-generator__title {
+    font-size: 1.4rem;
+  }
+
+  .images-generator__description {
+    font-size: 1.2rem;
+  }
+
+  .images-generator__form {
+    margin-bottom: 45px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .images-generator__controls {
+    height: 100%;
+    margin-top: unset;
+    align-items: unset;
+    justify-content: unset;
+  }
+
+  .images-generator__quantity-select {
+    color: initial;
+  }
+
+  .images-generator__quantity-select option {
+    color: initial;
+  }
+
+  .images-generator__generate-btn {
+    height: uset;
+    color: var(--text-color-light);
+    background: var(--button-color);
+  }
+
+  .image-gallery {
+    margin-top: 50px;
+  }
+
+  .card:not(.loading) .card__download-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .card {
+    width: 285px;
+  }
+}

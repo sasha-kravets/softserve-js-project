@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/png">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/chatbot.js" defer></script>
+  <script src="./js/dalle.js" defer></script>
+  <!-- <script src="./index.js" defer></script> -->
+  <title>SoftServe | JS | Project</title>
+</head>
+
+<body>
+  <section class="project container">
+    <h1 class="project__title">OpenAI Utilities</h1>
+
+    <div class="project__utilities-container">
+      <div class="project__utility chatbot">
+        <header class="chatbot__header">
+          <h2 class="chatbot__title">ChatGPT</h2>
+        </header>
+        <ul class="chatbot__chatbox chatbox">
+          <li class="chatbox__msg chatbox__msg_incoming">
+            <span class="chatbox__msg-icon"><img src="img/openai-icon.svg" alt="OpenAI icon"></span>
+            <p class="chatbox__msg-text">Hey there 👋<br>I am a chatbot that works the same way as ChatGPT</p>
+          </li>
+        </ul>
+        <div class="chatbot__input-container">
+          <textarea placeholder="Message ChatGPT..." required class="chatbot__input-textarea"></textarea>
+          <button type="submit" class="chatbot__input-btn">
+            <span class="chatbot__send-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white dark:text-black"><path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="project__utility images-generator">
+        <div class="images-generator__content">
+          <h1 class="images-generator__title">DALL·E</h1>
+          <p class="images-generator__description">Convert your text into an image.</p>
+          <form action="#" class="images-generator__form">
+            <input type="text" class="images-generator__prompt-input" placeholder="Describe what you want to see" required>
+            <div class="images-generator__controls">
+              <select name="images quantity" class="images-generator__quantity-select">
+                <option value="1">1 Image</option>
+                <option value="2" selected>2 Images</option>
+                <option value="3">3 Images</option>
+                <option value="4">4 Images</option>
+              </select>
+              <button type="submit" class="images-generator__generate-btn">Generate</button>
+            </div>
+          </form>
+        </div>
+        <div class="image-gallery">
+          <div class="image-gallery__card card">
+            <img src="img/dalle/img-1.jpg" alt="Example #1" class="card__img">
+          </div>
+          <div class="image-gallery__card card">
+            <img src="img/dalle/img-3.jpg" alt="Example #3" class="card__img">
+          </div>
+          <!-- <div class="image-gallery__card card">
+            <img src="img/dalle/img-2.jpg" alt="Example #2" class="card__img">
+          </div>
+          <div class="image-gallery__card card">
+            <img src="img/dalle/img-4.jpg" alt="Example #4" class="card__img">
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
