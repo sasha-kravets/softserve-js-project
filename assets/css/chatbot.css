@@ -12,7 +12,6 @@
 
 /* Chatbot */
 .chatbot {
-  flex: 0 0 45%;
   display: flex;
   flex-direction: column;
   background: var(--chatbot-background);
@@ -20,6 +19,13 @@
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   height: 580px;
+}
+
+@media (min-width: 1184px) {
+  .chatbot {
+    flex: 0 0 45%;
+    height: 580px;
+  }
 }
 
 .chatbot__header {

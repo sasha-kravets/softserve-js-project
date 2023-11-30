@@ -18,7 +18,7 @@ const createChatLi = (message, className) => {
   let chatContent =
     className === "chatbox__msg_outgoing"
       ? `<p class="chatbox__msg-text"></p>`
-      : `<span class="chatbox__msg-icon"><img src="img/openai-icon.svg" alt="OpenAI icon"></span>
+      : `<span class="chatbox__msg-icon"><img src="assets/img/openai-icon.svg" alt="OpenAI icon"></span>
          <p class="chatbox__msg-text"></p>`;
 
   // Prevents the use of html tags in the input
@@ -94,3 +94,5 @@ chatInput.addEventListener("keydown", (event) => {
     handleChat();
   }
 });
+
+export default { chatbot, handleChat };

@@ -2,7 +2,6 @@
   --top-background: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
   --text-color-light: #FFFFFF;
   --form-background-color: #FFFFFF;
-  /* --button-color: #11103E; */
   --button-color: #19c37d;
   --download-btn-background: #FFFFFF;
   --loading-card-backround: #F2F2F2;
@@ -10,17 +9,18 @@
   --mobile-btn-background: #FFFFFF;
 }
 
-.image-generator {
+.images-generator {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* height: 45vh; */
-  background: var(--top-background);
 }
 
 .images-generator__content {
   color: var(--text-color-light);
   padding: 0 15px;
+  width: 100%;
   max-width: 760px;
   text-align: center;
 }
@@ -80,13 +80,13 @@
   height: 100%;
   outline: none;
   border: none;
-  background: var(--mobile-btn-background);
+  background: var(--button-color);
   border-radius: 30px;
   font-size: 1rem;
   font-weight: 500;
   padding: 0 25px;
   cursor: pointer;
-  color: var(--text-color-dark)
+  color: var(--text-color-light)
 }
 
 /* Image Galley */
@@ -97,7 +97,7 @@
   gap: 15px;
   padding: 0 15px;
   max-width: 1250px;
-  margin: 20px auto 50px auto;
+  margin: 70px auto 50px auto;
 }
 
 .card {
@@ -195,7 +195,7 @@
   }
 
   .image-gallery {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .card:not(.loading) .card__download-btn {

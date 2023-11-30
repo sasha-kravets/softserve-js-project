@@ -73,9 +73,9 @@ const handleFormSubmission = (e) => {
     { length: userImgQuantity },
     () =>
       `<div class="image-gallery__card card loading">
-      <img src="img/dalle/loader.svg" alt="AI generated image" class="card__img">
+      <img src="assets/img/dalle/loader.svg" alt="AI generated image" class="card__img">
       <a href="#" class="card__download-btn">
-        <img src="img/dalle/download.svg" alt="download icon" class="card__download-btn-icon">
+        <img src="assets/img/dalle/download.svg" alt="download icon" class="card__download-btn-icon">
       </a>
     </div>`,
   ).join("");
@@ -85,3 +85,5 @@ const handleFormSubmission = (e) => {
 };
 
 generateForm.addEventListener("submit", handleFormSubmission);
+
+export default { generateForm, handleFormSubmission };
